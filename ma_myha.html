@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ma Myha 🔐</title>
+<style>
+body{font-family:system-ui,sans-serif;background:#111;color:#fff;min-height:100vh;display:grid;place-items:center;margin:0;padding:20px}
+.card{max-width:650px;width:100%;background:#1d1d1d;border-radius:24px;padding:28px;box-sizing:border-box;box-shadow:0 10px 40px #0008}
+h1{text-align:center;margin-top:0}
+input,button{width:100%;padding:14px;border-radius:12px;border:0;box-sizing:border-box;font-size:16px}
+button{margin-top:10px;cursor:pointer}
+#msg{display:none;line-height:1.75;white-space:pre-line}
+.err{color:#ff8a8a;text-align:center;display:none}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>Ma Myha 🔐</h1>
+<div id="lock">
+<p style="text-align:center">Entre le code pour découvrir ton message.</p>
+<input id="code" type="password" placeholder="Code d’accès">
+<button onclick="unlock()">Entrer</button>
+<p id="err" class="err">Code incorrect.</p>
+</div>
+<div id="msg">Il y a des personnes à qui l’on souhaite simplement « joyeux anniversaire », et puis il y a celles qui méritent qu’on prenne un peu plus de temps pour choisir ses mots… Tu fais clairement partie de la deuxième catégorie. Alors, j’aurais pu te préparer un long discours rempli de belles phrases, de compliments et de grandes déclarations… mais soyons honnêtes, je ne voudrais quand même pas que tu prennes trop la grosse tête dès aujourd’hui. 😂
+
+Plus sérieusement, cette journée est l’occasion parfaite de te dire quelque chose que je ne prends peut-être pas toujours le temps de dire : depuis que je te connais, tu as réussi à attirer mon attention d’une manière assez particulière. Ton sourire, ta personnalité, ta façon d’être… il y a chez toi ce petit quelque chose qu’on ne sait pas vraiment expliquer, mais qu’on remarque. Et le plus amusant, c’est que plus j’essaie de faire comme si de rien n’était, plus je réalise que tu occupes une place un peu trop intéressante dans mes pensées.
+
+Alors aujourd’hui, je ne vais pas seulement te souhaiter un joyeux anniversaire. Je vais profiter de cette occasion pour te rappeler que certaines rencontres ne sont peut-être pas aussi anodines qu’on le croit… et que, parfois, une personne peut devenir une belle surprise sans même l’avoir prévu.</div>
+</div>
+<script>
+function unlock(){
+  const code=document.getElementById('code').value;
+  if(code==='Love1010'){
+    document.getElementById('lock').style.display='none';
+    document.getElementById('msg').style.display='block';
+  } else document.getElementById('err').style.display='block';
+}
+</script>
+</body>
+</html>
